@@ -1,0 +1,807 @@
+.celebration-flow {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 8% 15%,
+      rgba(213, 186, 140, 0.38),
+      transparent 31%
+    ),
+    radial-gradient(
+      circle at 92% 70%,
+      rgba(182, 146, 91, 0.24),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 50% 42%,
+      rgba(255, 255, 255, 0.65),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #fffdf9 0%,
+      #fff8ef 27%,
+      #f7ecdf 58%,
+      #f4e6d5 76%,
+      #fffaf4 100%
+    );
+}
+
+.celebration-flow::before,
+.celebration-flow::after {
+  position: absolute;
+  border: 1px solid rgba(182, 146, 91, 0.1);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.celebration-flow::before {
+  top: 4%;
+  left: -230px;
+  width: 500px;
+  height: 500px;
+}
+
+.celebration-flow::after {
+  right: -270px;
+  bottom: 6%;
+  width: 600px;
+  height: 600px;
+}
+
+.celebration-flow__pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.34;
+  pointer-events: none;
+  background-image:
+    linear-gradient(
+      45deg,
+      rgba(182, 146, 91, 0.025) 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      -45deg,
+      rgba(182, 146, 91, 0.025) 25%,
+      transparent 25%
+    );
+  background-size: 48px 48px;
+}
+
+.celebration-flow__glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(25px);
+  pointer-events: none;
+  animation: celebrationFlowGlow 10s ease-in-out infinite;
+}
+
+.celebration-flow__glow--left {
+  top: 230px;
+  left: -160px;
+  width: 450px;
+  height: 450px;
+  background: rgba(213, 186, 140, 0.2);
+}
+
+.celebration-flow__glow--right {
+  right: -190px;
+  bottom: 260px;
+  width: 520px;
+  height: 520px;
+  background: rgba(182, 146, 91, 0.16);
+  animation-delay: -5s;
+}
+
+/* Invitation */
+
+.celebration-invitation {
+  position: relative;
+  z-index: 2;
+  padding: 135px max(6vw, 28px) 85px;
+}
+
+.celebration-invitation__content {
+  position: relative;
+  width: min(100%, 980px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.celebration-invitation__content::before {
+  position: absolute;
+  top: -75px;
+  left: 50%;
+  width: 350px;
+  height: 350px;
+  border: 1px solid rgba(182, 146, 91, 0.1);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.celebration-invitation__content > * {
+  position: relative;
+  z-index: 2;
+}
+
+.celebration-invitation__eyebrow,
+.celebration-schedule__eyebrow {
+  margin: 0 0 18px;
+  color: #a58b68;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.celebration-invitation__title {
+  margin: 0;
+  color: #2e2924;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(50px, 7vw, 82px);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.celebration-invitation__title span {
+  color: #b6925b;
+  font-family: "Great Vibes", cursive;
+  font-size: 0.88em;
+  font-weight: 400;
+}
+
+.celebration-invitation__monogram {
+  display: flex;
+  margin: 25px 0;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: #866536;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+}
+
+.celebration-invitation__monogram b {
+  color: #b6925b;
+  font-family: "Great Vibes", cursive;
+  font-size: 38px;
+  font-weight: 400;
+}
+
+.celebration-invitation__message {
+  max-width: 680px;
+  margin: 0 auto 60px;
+  color: #74675c;
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.celebration-invitation__details {
+  display: grid;
+  width: min(100%, 850px);
+  margin: 0 auto;
+  grid-template-columns: 1fr 120px 1fr;
+  align-items: center;
+}
+
+.celebration-invitation__detail {
+  position: relative;
+  padding: 34px 25px;
+}
+
+.celebration-invitation__detail::after {
+  position: absolute;
+  right: 18%;
+  bottom: 0;
+  left: 18%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(182, 146, 91, 0.42),
+    transparent
+  );
+  content: "";
+}
+
+.celebration-invitation__label {
+  display: block;
+  margin-bottom: 13px;
+  color: #a58b68;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.celebration-invitation__detail strong {
+  display: block;
+  color: #3a332d;
+  font-family: "Playfair Display", serif;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.celebration-invitation__detail p {
+  margin: 10px 0 0;
+  color: #887a6d;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.celebration-invitation__middle {
+  display: flex;
+  min-height: 145px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.celebration-invitation__middle span {
+  width: 1px;
+  height: 44px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(182, 146, 91, 0.58)
+  );
+}
+
+.celebration-invitation__middle span:last-child {
+  background: linear-gradient(
+    to top,
+    transparent,
+    rgba(182, 146, 91, 0.58)
+  );
+}
+
+.celebration-invitation__middle b {
+  color: #b6925b;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.celebration-invitation__signature {
+  margin: 55px 0 0;
+  color: #866536;
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(30px, 4vw, 41px);
+}
+
+/* Connected divider */
+
+.celebration-flow__divider {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  width: min(calc(100% - 40px), 920px);
+  height: 130px;
+  margin: -10px auto -20px;
+  align-items: center;
+  justify-content: center;
+  gap: 23px;
+}
+
+.celebration-flow__divider::before {
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  width: 125%;
+  height: 150px;
+  border-top: 1px solid rgba(182, 146, 91, 0.17);
+  border-radius: 50% 50% 0 0;
+  content: "";
+  pointer-events: none;
+  transform: translate(-50%, 0);
+}
+
+.celebration-flow__divider-line {
+  position: relative;
+  z-index: 2;
+  width: min(28vw, 285px);
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(182, 146, 91, 0.68)
+  );
+}
+
+.celebration-flow__divider-line--right {
+  background: linear-gradient(
+    to left,
+    transparent,
+    rgba(182, 146, 91, 0.68)
+  );
+}
+
+.celebration-flow__divider-monogram {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  width: 84px;
+  height: 84px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: 1px solid rgba(182, 146, 91, 0.45);
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle,
+      #fffaf4 0%,
+      #f1dfc8 100%
+    );
+  box-shadow:
+    0 15px 36px rgba(107, 78, 43, 0.12),
+    inset 0 0 0 7px rgba(182, 146, 91, 0.07);
+  color: #866536;
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+}
+
+.celebration-flow__divider-monogram::before {
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(182, 146, 91, 0.23);
+  border-radius: 50%;
+  content: "";
+}
+
+.celebration-flow__divider-monogram span,
+.celebration-flow__divider-monogram b {
+  position: relative;
+  z-index: 2;
+}
+
+.celebration-flow__divider-monogram b {
+  color: #b6925b;
+  font-family: "Great Vibes", cursive;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+/* Schedule */
+
+.celebration-schedule {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  padding: 105px max(6vw, 28px) 135px;
+}
+
+.celebration-schedule__heading {
+  width: min(100%, 720px);
+  margin: 0 auto 75px;
+  text-align: center;
+}
+
+.celebration-schedule__heading h2 {
+  margin: 0;
+  color: #2e2924;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(43px, 6vw, 68px);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.celebration-schedule__heading-decoration {
+  display: flex;
+  margin: 23px 0;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+}
+
+.celebration-schedule__heading-decoration span {
+  width: 62px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(182, 146, 91, 0.75)
+  );
+}
+
+.celebration-schedule__heading-decoration span:last-child {
+  background: linear-gradient(
+    to left,
+    transparent,
+    rgba(182, 146, 91, 0.75)
+  );
+}
+
+.celebration-schedule__heading-decoration b {
+  color: #b6925b;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.celebration-schedule__description {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #7b6e62;
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.celebration-schedule__timeline {
+  position: relative;
+  width: min(100%, 940px);
+  margin: 0 auto;
+}
+
+.celebration-schedule__timeline::before {
+  position: absolute;
+  top: 35px;
+  bottom: 35px;
+  left: 181px;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(182, 146, 91, 0.48) 10%,
+    rgba(182, 146, 91, 0.48) 90%,
+    transparent
+  );
+  content: "";
+}
+
+.celebration-schedule__item {
+  display: grid;
+  min-height: 165px;
+  grid-template-columns: 150px 62px 1fr;
+  align-items: start;
+}
+
+.celebration-schedule__time {
+  padding-top: 29px;
+  text-align: right;
+}
+
+.celebration-schedule__time span {
+  color: #866536;
+  font-family: "Playfair Display", serif;
+  font-size: 29px;
+  font-weight: 500;
+}
+
+.celebration-schedule__marker {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.celebration-schedule__marker i {
+  position: relative;
+  z-index: 3;
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin-top: 38px;
+  border: 4px solid #f7ecdf;
+  border-radius: 50%;
+  background: #b6925b;
+  box-shadow:
+    0 0 0 1px #b6925b,
+    0 0 0 7px rgba(182, 146, 91, 0.1);
+  transition:
+    box-shadow 0.35s ease,
+    transform 0.35s ease;
+}
+
+.celebration-schedule__card {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 30px 38px 32px;
+  overflow: hidden;
+  border: 1px solid rgba(182, 146, 91, 0.24);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.68),
+      rgba(255, 249, 240, 0.38)
+    );
+  box-shadow:
+    0 18px 46px rgba(101, 75, 43, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  transition:
+    border-color 0.4s ease,
+    box-shadow 0.4s ease,
+    transform 0.4s ease;
+}
+
+.celebration-schedule__card::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    #d5ba8c,
+    #9f7a44
+  );
+  content: "";
+  opacity: 0.75;
+}
+
+.celebration-schedule__item:hover
+  .celebration-schedule__card {
+  border-color: rgba(182, 146, 91, 0.48);
+  box-shadow:
+    0 25px 58px rgba(101, 75, 43, 0.13),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transform: translateX(8px);
+}
+
+.celebration-schedule__item:hover
+  .celebration-schedule__marker i {
+  box-shadow:
+    0 0 0 1px #b6925b,
+    0 0 0 11px rgba(182, 146, 91, 0.14);
+  transform: scale(1.08);
+}
+
+.celebration-schedule__number {
+  position: absolute;
+  top: 10px;
+  right: 23px;
+  color: rgba(182, 146, 91, 0.15);
+  font-family: "Playfair Display", serif;
+  font-size: 65px;
+  line-height: 1;
+}
+
+.celebration-schedule__step {
+  margin: 0 0 8px;
+  color: #ac906a;
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.celebration-schedule__card h3 {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 12px;
+  color: #302a25;
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.celebration-schedule__copy {
+  position: relative;
+  z-index: 2;
+  max-width: 590px;
+  margin: 0;
+  color: #786c62;
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.celebration-schedule__card-line {
+  width: 45px;
+  height: 1px;
+  margin-top: 21px;
+  background: linear-gradient(
+    to right,
+    #b6925b,
+    transparent
+  );
+  transition: width 0.4s ease;
+}
+
+.celebration-schedule__item:hover
+  .celebration-schedule__card-line {
+  width: 95px;
+}
+
+@keyframes celebrationFlowGlow {
+  0%,
+  100% {
+    opacity: 0.62;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate3d(20px, -17px, 0)
+      scale(1.08);
+  }
+}
+
+@media (max-width: 800px) {
+  .celebration-invitation {
+    padding: 105px 22px 65px;
+  }
+
+  .celebration-invitation__details {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .celebration-invitation__detail {
+    width: 100%;
+    padding: 25px 15px;
+  }
+
+  .celebration-invitation__middle {
+    min-height: auto;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .celebration-invitation__middle span {
+    width: 70px;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(182, 146, 91, 0.58)
+    );
+  }
+
+  .celebration-invitation__middle span:last-child {
+    background: linear-gradient(
+      to left,
+      transparent,
+      rgba(182, 146, 91, 0.58)
+    );
+  }
+
+  .celebration-flow__divider {
+    height: 110px;
+    margin-bottom: -10px;
+  }
+
+  .celebration-flow__divider-monogram {
+    width: 70px;
+    height: 70px;
+  }
+
+  .celebration-schedule {
+    padding: 85px 22px 110px;
+  }
+
+  .celebration-schedule__heading {
+    margin-bottom: 55px;
+  }
+
+  .celebration-schedule__timeline::before {
+    left: 20px;
+  }
+
+  .celebration-schedule__item {
+    grid-template-columns: 42px 1fr;
+    min-height: auto;
+  }
+
+  .celebration-schedule__time {
+    grid-column: 2;
+    padding: 0 0 10px 25px;
+    text-align: left;
+  }
+
+  .celebration-schedule__time span {
+    font-size: 23px;
+  }
+
+  .celebration-schedule__marker {
+    grid-row: 1 / span 2;
+    grid-column: 1;
+  }
+
+  .celebration-schedule__marker i {
+    margin-top: 8px;
+  }
+
+  .celebration-schedule__card {
+    grid-column: 2;
+    margin: 0 0 38px;
+    padding: 27px 29px 29px;
+  }
+
+  .celebration-schedule__item:hover
+    .celebration-schedule__card {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 520px) {
+  .celebration-invitation {
+    padding-top: 90px;
+  }
+
+  .celebration-invitation__eyebrow,
+  .celebration-schedule__eyebrow {
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+
+  .celebration-invitation__title {
+    font-size: 47px;
+  }
+
+  .celebration-invitation__message {
+    margin-bottom: 38px;
+    font-size: 16px;
+  }
+
+  .celebration-invitation__detail strong {
+    font-size: 20px;
+  }
+
+  .celebration-invitation__signature {
+    margin-top: 40px;
+    font-size: 31px;
+  }
+
+  .celebration-flow__divider {
+    gap: 13px;
+  }
+
+  .celebration-flow__divider-line {
+    width: 80px;
+  }
+
+  .celebration-schedule {
+    padding: 75px 18px 95px;
+  }
+
+  .celebration-schedule__heading h2 {
+    font-size: 39px;
+  }
+
+  .celebration-schedule__description {
+    font-size: 15px;
+  }
+
+  .celebration-schedule__item {
+    grid-template-columns: 33px 1fr;
+  }
+
+  .celebration-schedule__timeline::before {
+    left: 15px;
+  }
+
+  .celebration-schedule__time {
+    padding-left: 18px;
+  }
+
+  .celebration-schedule__card {
+    padding: 25px 21px 27px;
+  }
+
+  .celebration-schedule__number {
+    top: 13px;
+    right: 16px;
+    font-size: 52px;
+  }
+
+  .celebration-schedule__card h3 {
+    padding-right: 45px;
+    font-size: 22px;
+  }
+
+  .celebration-schedule__copy {
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .celebration-flow__glow {
+    animation: none;
+  }
+}
