@@ -141,12 +141,22 @@ export const Wedding = () => {
   const scrollToSection = (
     sectionId: string,
   ): void => {
-    document
-      .getElementById(sectionId)
-      ?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+    const section = document.getElementById(sectionId);
+
+    if (!section) {
+      return;
+    }
+
+    const offset = 100;
+    const top =
+      section.getBoundingClientRect().top +
+      window.scrollY -
+      offset;
+
+    window.scrollTo({
+      top,
+      behavior: "smooth",
+    });
   };
 
   return (

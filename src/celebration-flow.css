@@ -212,7 +212,7 @@
   display: block;
   margin-bottom: 13px;
   color: #a58b68;
-  font-size: 9px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -229,7 +229,7 @@
 .celebration-invitation__detail p {
   margin: 10px 0 0;
   color: #887a6d;
-  font-size: 11px;
+  font-size: 16px;
   line-height: 1.7;
 }
 
@@ -281,7 +281,8 @@
   display: flex;
   width: min(calc(100% - 40px), 920px);
   height: 130px;
-  margin: -10px auto -20px;
+  margin: 24px auto -34px;
+  padding-bottom: 12px;
   align-items: center;
   justify-content: center;
   gap: 23px;
@@ -637,6 +638,10 @@
     padding: 25px 15px;
   }
 
+  .celebration-invitation__detail::after {
+    display: none;
+  }
+
   .celebration-invitation__middle {
     min-height: auto;
     width: 100%;
@@ -740,7 +745,7 @@
   }
 
   .celebration-invitation__detail strong {
-    font-size: 20px;
+    font-size: 40px;
   }
 
   .celebration-invitation__signature {

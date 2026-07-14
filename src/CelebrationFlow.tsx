@@ -82,12 +82,6 @@ export const CelebrationFlow = ({
             Save <span>the</span> Date
           </h2>
 
-          <div className="celebration-invitation__monogram">
-            <span>{firstName.charAt(0)}</span>
-            <b>&amp;</b>
-            <span>{secondName.charAt(0)}</span>
-          </div>
-
           <p className="celebration-invitation__message">
             With joyful hearts, we invite you to share in our
             happiness as we unite in marriage and celebrate the
@@ -128,29 +122,24 @@ export const CelebrationFlow = ({
           <p className="celebration-invitation__signature">
             We cannot wait to celebrate with you
           </p>
+
+          <div
+            className="celebration-flow__divider"
+            aria-hidden="true"
+          >
+            <span className="celebration-flow__divider-line" />
+
+            <div className="celebration-flow__divider-monogram">
+              <span>{firstName.charAt(0)}</span>
+              <b>&amp;</b>
+              <span>{secondName.charAt(0)}</span>
+            </div>
+
+            <span className="celebration-flow__divider-line celebration-flow__divider-line--right" />
+          </div>
         </div>
       </section>
 
-      {/* Decorative connection */}
-
-      <div
-        className="celebration-flow__divider"
-        aria-hidden="true"
-      >
-        <span className="celebration-flow__divider-line" />
-
-        <div className="celebration-flow__divider-monogram">
-          <span>{firstName.charAt(0)}</span>
-          <b>&amp;</b>
-          <span>{secondName.charAt(0)}</span>
-        </div>
-
-        <span className="celebration-flow__divider-line celebration-flow__divider-line--right" />
-      </div>
-
-      {/* Schedule */}
-
-    
     </div>
   );
 };

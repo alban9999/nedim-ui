@@ -258,7 +258,7 @@
   border-radius: 999px;
   background: rgba(255, 248, 239, 0.65);
   color: #866536;
-  font-size: 9px;
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 2px;
   text-decoration: none;
@@ -347,6 +347,7 @@
 
   .wedding-venue__artwork-image {
     object-position: center bottom;
+    filter: blur(1px);
   }
 
   .wedding-venue__artwork-fade {
@@ -389,6 +390,17 @@
     margin-left: auto;
   }
 
+  .wedding-venue__date span,
+  .wedding-venue__date small {
+    font-size: 16px;
+    letter-spacing: 2.2px;
+  }
+
+  .wedding-venue__date strong {
+    margin-top: 9px;
+    font-size: 24px;
+  }
+
   .wedding-venue__information {
     width: min(100%, 520px);
     margin-right: auto;
@@ -427,6 +439,20 @@
     min-width: 0;
     padding-right: 15px;
     padding-left: 15px;
+  }
+
+  .wedding-venue__artwork-image {
+    filter: blur(2px);
+  }
+
+  .wedding-venue__date span,
+  .wedding-venue__date small {
+    font-size: 14px;
+    letter-spacing: 2.4px;
+  }
+
+  .wedding-venue__date strong {
+    font-size: 40px;
   }
 
   .wedding-venue__information {

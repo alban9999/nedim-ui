@@ -129,68 +129,55 @@
 }
 
 .simple-rsvp__description {
-  max-width: 610px;
-  margin: 0 auto;
+  max-width: 630px;
+  margin: 0 auto 42px;
   color: #74685e;
   font-family: "Playfair Display", serif;
   font-size: 17px;
   line-height: 1.85;
 }
 
-.simple-rsvp__date {
-  width: fit-content;
-  margin: 35px auto 42px;
-  padding: 17px 42px;
-  border-top: 1px solid rgba(182, 146, 91, 0.32);
-  border-bottom: 1px solid rgba(182, 146, 91, 0.32);
-}
-
-.simple-rsvp__date span {
-  display: block;
-  margin-bottom: 7px;
-  color: #9c876d;
-  font-size: 8px;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-}
-
-.simple-rsvp__date strong {
+.simple-rsvp__deadline {
   color: #866536;
-  font-family: "Playfair Display", serif;
-  font-size: 20px;
-  font-weight: 500;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .simple-rsvp__buttons {
   display: grid;
   width: min(100%, 630px);
   margin: 0 auto;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
 
 .simple-rsvp__button {
   position: relative;
-  display: grid;
-  min-height: 92px;
-  padding: 17px 22px;
-  grid-template-columns: 1fr;
+  display: inline-flex;
+  width: 100%;
+  min-width: 0;
+  min-height: 78px;
+  padding: 18px 24px;
   align-items: center;
-  gap: 14px;
+  justify-content: center;
   overflow: hidden;
-  border: 1px solid rgba(182, 146, 91, 0.24);
+  border: 1px solid rgba(182, 146, 91, 0.28);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.74);
   box-shadow: 0 17px 42px rgba(92, 67, 39, 0.08);
   color: #473d35;
-  text-align: left;
+  text-align: center;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
   backdrop-filter: blur(10px);
+  box-sizing: border-box;
+  cursor: pointer;
+  touch-action: manipulation;
   transition:
-    border-color 0.35s ease,
-    box-shadow 0.35s ease,
-    color 0.35s ease,
-    transform 0.35s ease;
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .simple-rsvp__button::before {
@@ -199,23 +186,23 @@
   background: linear-gradient(135deg, #b6925b 0%, #8d6f3b 100%);
   content: "";
   opacity: 0;
-  transition: opacity 0.35s ease;
+  transition: opacity 0.3s ease;
 }
 
-.simple-rsvp__button > * {
+.simple-rsvp__button > span {
   position: relative;
   z-index: 2;
-}
-
-.simple-rsvp__button:hover {
-  border-color: transparent;
-  box-shadow: 0 22px 50px rgba(72, 51, 30, 0.17);
-  color: #ffffff;
-  transform: translateY(-5px);
-}
-
-.simple-rsvp__button:hover::before {
-  opacity: 1;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  color: currentColor;
+  font-family: "Playfair Display", serif;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: center;
+  overflow-wrap: anywhere;
+  transition: color 0.3s ease;
 }
 
 .simple-rsvp__button--whatsapp {
@@ -226,50 +213,14 @@
   color: #72558f;
 }
 
-.simple-rsvp__icon {
-  width: 42px;
-  height: 42px;
+.simple-rsvp__button:focus-visible {
+  outline: 3px solid rgba(134, 101, 54, 0.28);
+  outline-offset: 4px;
 }
 
-.simple-rsvp__button > span {
-  display: block;
-  width: 100%;
-  color: #342e29;
-  font-family: "Playfair Display", serif;
-  font-size: 20px;
-  font-weight: 500;
-  text-align: center;
-  transition: color 0.35s ease;
-}
-
-.simple-rsvp__button:hover > span {
-  color: #ffffff;
-}
-
-.simple-rsvp__button small {
-  display: block;
-  margin-bottom: 4px;
-  color: #9c8d80;
-  font-family: "Montserrat", sans-serif;
-  font-size: 7px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  transition: color 0.35s ease;
-}
-
-.simple-rsvp__button:hover small {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.simple-rsvp__button > b {
-  font-size: 20px;
-  font-weight: 400;
-  transition: transform 0.35s ease;
-}
-
-.simple-rsvp__button:hover > b {
-  transform: translateX(4px);
+.simple-rsvp__button:active {
+  box-shadow: 0 10px 25px rgba(72, 51, 30, 0.13);
+  transform: translateY(1px) scale(0.985);
 }
 
 .simple-rsvp__signature {
@@ -287,6 +238,19 @@
   font-weight: 400;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .simple-rsvp__button:hover {
+    border-color: transparent;
+    box-shadow: 0 22px 50px rgba(72, 51, 30, 0.17);
+    color: #ffffff;
+    transform: translateY(-5px);
+  }
+
+  .simple-rsvp__button:hover::before {
+    opacity: 1;
+  }
+}
+
 @keyframes simpleRsvpGlow {
   0%,
   100% {
@@ -296,8 +260,7 @@
 
   50% {
     opacity: 1;
-    transform: translate3d(20px, -15px, 0)
-      scale(1.08);
+    transform: translate3d(20px, -15px, 0) scale(1.08);
   }
 }
 
@@ -311,23 +274,32 @@
     inset: 14px;
   }
 
+  .simple-rsvp__description {
+    margin-bottom: 34px;
+  }
+
   .simple-rsvp__buttons {
+    width: 100%;
     max-width: 430px;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
   }
 
   .simple-rsvp__button {
-    min-height: 86px;
+    width: 100%;
+    min-height: 68px;
+    padding: 16px 20px;
   }
 }
 
 @media (max-width: 520px) {
   .simple-rsvp {
+    min-height: 620px;
     padding: 85px 18px;
   }
 
   .simple-rsvp__eyebrow {
-    font-size: 8px;
+    font-size: 14px;
     letter-spacing: 3px;
   }
 
@@ -335,29 +307,38 @@
     font-size: 41px;
   }
 
-  .simple-rsvp__description {
-    font-size: 15px;
+  .simple-rsvp__decoration {
+    margin: 21px 0;
   }
 
-  .simple-rsvp__date {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+  .simple-rsvp__description {
+    max-width: 390px;
+    margin-bottom: 30px;
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .simple-rsvp__deadline {
+    white-space: normal;
+  }
+
+  .simple-rsvp__buttons {
+    max-width: none;
   }
 
   .simple-rsvp__button {
-    padding: 15px 18px;
-    grid-template-columns: 42px 1fr 18px;
-    border-radius: 999px;
-  }
-
-  .simple-rsvp__icon {
-    width: 37px;
-    height: 37px;
+    min-height: 64px;
+    padding: 15px 16px;
+    border-radius: 18px;
   }
 
   .simple-rsvp__button > span {
-    font-size: 18px;
+    width: 100%;
+    font-size: 17px;
+  }
+
+  .simple-rsvp__signature {
+    margin-top: 38px;
   }
 }
 
@@ -366,7 +347,9 @@
     animation: none;
   }
 
-  .simple-rsvp__button {
+  .simple-rsvp__button,
+  .simple-rsvp__button::before,
+  .simple-rsvp__button > span {
     transition: none;
   }
 }

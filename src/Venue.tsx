@@ -79,35 +79,10 @@ export const Venue = ({
 
             <strong>{dateText}</strong>
 
-            <small>
-              Guest arrival at {ceremonyTime}
-            </small>
+           
           </div>
 
-          <div className="wedding-venue__information">
-            <div className="wedding-venue__information-item">
-              <span className="wedding-venue__information-icon">
-                ◷
-              </span>
-
-              <div>
-                <small>Guest arrival</small>
-                <strong>{ceremonyTime}</strong>
-              </div>
-            </div>
-
-            <div className="wedding-venue__information-item">
-              <span className="wedding-venue__information-icon">
-                ⌖
-              </span>
-
-              <div>
-                <small>Location</small>
-                <strong>{venueAddress}</strong>
-              </div>
-            </div>
-          </div>
-
+         
           <a
             href={mapUrl}
             target="_blank"
@@ -115,7 +90,6 @@ export const Venue = ({
             className="wedding-venue__map-button"
           >
             <span>Open in Maps</span>
-            <b>↗</b>
           </a>
         </div>
       </div>

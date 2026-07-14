@@ -26,7 +26,6 @@ export const RSVP = ({
   );
 
   const whatsappUrl = `https://wa.me/${whatsappPhone}?text=${confirmationMessage}`;
-
   const viberUrl = `viber://chat?number=${encodeURIComponent(viberPhone)}`;
 
   return (
@@ -42,7 +41,7 @@ export const RSVP = ({
 
         <h2>Will You Join Us?</h2>
 
-        <div className="simple-rsvp__decoration">
+        <div className="simple-rsvp__decoration" aria-hidden="true">
           <span />
           <b>❦</b>
           <span />
@@ -50,13 +49,9 @@ export const RSVP = ({
 
         <p className="simple-rsvp__description">
           Your presence would make our celebration even more meaningful. Please
-          confirm your attendance directly through WhatsApp or Viber.
+          confirm your attendance directly through WhatsApp or Viber by{" "}
+          <strong className="simple-rsvp__deadline">1 August 2026</strong>.
         </p>
-
-        <div className="simple-rsvp__date">
-          <span>Please respond before</span>
-          <strong>1 August 2026</strong>
-        </div>
 
         <div className="simple-rsvp__buttons">
           <a
@@ -64,6 +59,7 @@ export const RSVP = ({
             target="_blank"
             rel="noreferrer"
             className="simple-rsvp__button simple-rsvp__button--whatsapp"
+            aria-label="Confirm attendance using WhatsApp"
           >
             <span>Confirm using WhatsApp</span>
           </a>
@@ -71,6 +67,7 @@ export const RSVP = ({
           <a
             href={viberUrl}
             className="simple-rsvp__button simple-rsvp__button--viber"
+            aria-label="Confirm attendance using Viber"
           >
             <span>Confirm using Viber</span>
           </a>

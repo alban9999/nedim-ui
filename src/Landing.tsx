@@ -31,7 +31,7 @@ export const Landing = ({
         visible ? "dual-landing--visible" : ""
       }`}
     >
-      {/* Mobile image containing both people */}
+      {/* Mobile: one full-screen photo with content over it */}
       <div className="dual-landing__mobile-photo">
         <img
           src={bothImage}
@@ -39,17 +39,56 @@ export const Landing = ({
           className="dual-landing__mobile-photo-image"
         />
 
-        <div className="dual-landing__mobile-photo-overlay" />
-        <div className="dual-landing__mobile-photo-frame" />
+        <div
+          className="dual-landing__mobile-photo-overlay"
+          aria-hidden="true"
+        />
+        <div
+          className="dual-landing__mobile-photo-frame"
+          aria-hidden="true"
+        />
 
-        <div className="dual-landing__mobile-names">
-          <span>{firstName}</span>
-          <b>&amp;</b>
-          <span>{secondName}</span>
+        <div
+          className="dual-landing__mobile-monogram"
+          aria-hidden="true"
+        >
+          {initials}
+        </div>
+
+        <div className="dual-landing__mobile-content">
+          <p className="dual-landing__mobile-eyebrow">
+            We are getting married
+          </p>
+
+          <h1 className="dual-landing__mobile-names">
+            <span>{firstName}</span>
+            <b>&amp;</b>
+            <span>{secondName}</span>
+          </h1>
+
+          <div className="dual-landing__mobile-date">
+            <span>{dayName}</span>
+            <strong>{dateText}</strong>
+            <span>{ceremonyTime}</span>
+          </div>
+
+          <button
+            type="button"
+            className="dual-landing__mobile-button"
+            onClick={onViewInvitation}
+          >
+            <span>Scroll down</span>
+            <span
+              className="dual-landing__button-arrow"
+              aria-hidden="true"
+            >
+              ↓
+            </span>
+          </button>
         </div>
       </div>
 
-      {/* Nedim — desktop left side */}
+      {/* Desktop: groom portrait */}
       <div className="dual-landing__portrait dual-landing__portrait--left">
         <img
           src={nedimImage}
@@ -66,7 +105,7 @@ export const Landing = ({
         </div>
       </div>
 
-      {/* Invitation content — middle */}
+      {/* Desktop: invitation content */}
       <div className="dual-landing__center">
         <div
           className="dual-landing__petals"
@@ -81,10 +120,7 @@ export const Landing = ({
         </div>
 
         <div className="dual-landing__content">
-          <p className="dual-landing__eyebrow">
-            Together with their families
-          </p>
-
+         
           <h1 className="dual-landing__names">
             <span>{firstName}</span>
             <b>&amp;</b>
@@ -114,8 +150,13 @@ export const Landing = ({
             className="dual-landing__button"
             onClick={onViewInvitation}
           >
-            View Invitation
-            <span>↓</span>
+            <span>Scroll down</span>
+            <span
+              className="dual-landing__button-arrow"
+              aria-hidden="true"
+            >
+              ↓
+            </span>
           </button>
         </div>
 
@@ -137,7 +178,7 @@ export const Landing = ({
         </button>
       </div>
 
-      {/* Arlinda — desktop right side */}
+      {/* Desktop: bride portrait */}
       <div className="dual-landing__portrait dual-landing__portrait--right">
         <img
           src={arlindaImage}
