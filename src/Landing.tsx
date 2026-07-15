@@ -57,7 +57,7 @@ export const Landing = ({
 
         <div className="dual-landing__mobile-content">
           <p className="dual-landing__mobile-eyebrow">
-            We are getting married
+            Jeni të ftuar në dasmën e
           </p>
 
           <h1 className="dual-landing__mobile-names">

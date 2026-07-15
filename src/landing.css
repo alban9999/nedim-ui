@@ -892,7 +892,7 @@
 
   .dual-landing__mobile-names {
     gap: 3px 8px;
-    font-size: clamp(43px, 14vw, 61px);
+    font-size: clamp(60px, 18vw, 70px);
   }
 
   .dual-landing__mobile-date {

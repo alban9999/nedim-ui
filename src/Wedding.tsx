@@ -183,7 +183,7 @@ export const Wedding = () => {
             className="stamp-entry-button"
             onClick={handleEnter}
             disabled={leavingEntry}
-            aria-label="Tap to open the wedding invitation"
+            aria-label="Shtyp për të hapur ftesën"
           >
             <span className="stamp-entry-visual">
               <span className="stamp-glow" />
@@ -196,11 +196,7 @@ export const Wedding = () => {
             </span>
 
             <span className="stamp-tap-text">
-              Tap to open invitation
-            </span>
-
-            <span className="stamp-music-text">
-              Enter with background music
+              Shtyp për të hapur ftesën
             </span>
           </button>
         </div>
@@ -255,7 +251,7 @@ export const Wedding = () => {
         </div>
 
         <p>
-          We cannot wait to celebrate with you
+          Pjesëmarrja juaj, gëzimi ynë.
         </p>
 
         <h2>
@@ -271,7 +267,7 @@ export const Wedding = () => {
         </div>
 
         <small>
-          Made with love for our unforgettable day
+          Një natë e paharrueshme po na pret
         </small>
       </footer>
 
