@@ -77,7 +77,7 @@ export const Landing = ({
             className="dual-landing__mobile-button"
             onClick={onViewInvitation}
           >
-            <span>Scroll down</span>
+            <span>Shiko ftesën</span>
             <span
               className="dual-landing__button-arrow"
               aria-hidden="true"
@@ -134,9 +134,7 @@ export const Landing = ({
           </div>
 
           <p className="dual-landing__introduction">
-            Invite you to celebrate the beginning of their
-            forever—a day filled with love, laughter, elegance,
-            and beautiful memories.
+            Me shumë dashuri dhe gëzim, ju ftojmë të festoni së bashku me ne ditën më të veçantë të jetës sonë.
           </p>
 
           <div className="dual-landing__date">
@@ -150,7 +148,7 @@ export const Landing = ({
             className="dual-landing__button"
             onClick={onViewInvitation}
           >
-            <span>Scroll down</span>
+            <span>Shiko ftesën</span>
             <span
               className="dual-landing__button-arrow"
               aria-hidden="true"

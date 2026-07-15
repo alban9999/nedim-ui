@@ -78,10 +78,10 @@ export const Countdown = ({
       />
 
       <div className="countdown-content reveal">
-        <p>Counting down to our forever</p>
+        <p>Numërimi mbrapsht</p>
 
         <h2 id="countdown-title">
-          The Big Day Is Almost Here
+          Deri në ditën tonë të veçantë
         </h2>
 
         <div
@@ -90,28 +90,28 @@ export const Countdown = ({
         >
           <div className="countdown-item">
             <strong>{timeLeft.days}</strong>
-            <span>Days</span>
+            <span>Ditë</span>
           </div>
 
           <i aria-hidden="true" />
 
           <div className="countdown-item">
             <strong>{timeLeft.hours}</strong>
-            <span>Hours</span>
+            <span>Orë</span>
           </div>
 
           <i aria-hidden="true" />
 
           <div className="countdown-item">
             <strong>{timeLeft.minutes}</strong>
-            <span>Minutes</span>
+            <span>Minuta</span>
           </div>
 
           <i aria-hidden="true" />
 
           <div className="countdown-item">
             <strong>{timeLeft.seconds}</strong>
-            <span>Seconds</span>
+            <span>Sekonda</span>
           </div>
         </div>
       </div>

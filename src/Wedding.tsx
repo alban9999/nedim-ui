@@ -20,14 +20,14 @@ const WEDDING = {
   initials: "N & A",
 
   date: new Date(2026, 7, 24, 18, 0, 0),
-  dayName: "Monday",
-  dateText: "24 August 2026",
-  ceremonyTime: "18:00",
+  dayName: "E Enjte",
+  dateText: "13 Gusht 2026",
+  ceremonyTime: "19:00",
 
-  venueName: "Your Wedding Venue",
-  venueAddress: "Tetovë, North Macedonia",
+  venueName: "Ahengu & Sopi",
+  venueAddress: "Tetovë, Maqedoni e Veriut",
   mapUrl:
-    "https://maps.google.com/?q=Tetovo,+North+Macedonia",
+    "https://maps.app.goo.gl/X8XGd3rpVhYTJWk27",
 
   songUrl: music,
 };
@@ -246,7 +246,7 @@ export const Wedding = () => {
         secondName={WEDDING.secondName}
         dateText={WEDDING.dateText}
         ceremonyTime={WEDDING.ceremonyTime}
-        phoneNumber="+38970123456"
+        phoneNumber="+38976441599"
       />
 
       <footer className="wedding-footer">

@@ -1,10 +1,10 @@
 import "./wedding-separator.css";
 
 const separatorItems = [
-  "24 August 2026",
-  "Together With Our Families",
-  "Dinner · Music · Celebration",
-  "We Cannot Wait to Celebrate With You",
+  "13 Gusht 2026",
+  "Për një natë të paharrueshme",
+  "Gëzim · Muzikë · Festë",
+  "Prania juaj na nderon",
 ];
 
 export const WeddingSeparator = () => {

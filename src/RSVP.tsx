@@ -22,7 +22,7 @@ export const RSVP = ({
     : `+${phoneNumber.replace(/\D/g, "")}`;
 
   const confirmationMessage = encodeURIComponent(
-    `Hello ${firstName} & ${secondName}, I would like to confirm my attendance for your wedding on ${dateText} at ${ceremonyTime}.`,
+    `Përshëndetje ${firstName} & ${secondName}, dëshiroj të konfirmoj pjesëmarrjen time në dasmën tuaj më ${dateText} në ora ${ceremonyTime}.`,
   );
 
   const whatsappUrl = `https://wa.me/${whatsappPhone}?text=${confirmationMessage}`;
@@ -37,9 +37,9 @@ export const RSVP = ({
       <div className="simple-rsvp__glow" aria-hidden="true" />
 
       <div className="simple-rsvp__content reveal">
-        <p className="simple-rsvp__eyebrow">Kindly respond</p>
+        <p className="simple-rsvp__eyebrow">Ju lutemi, konfirmoni pjesëmarrjen</p>
 
-        <h2>Will You Join Us?</h2>
+        <h2>Konfirmo pjesëmarrjen</h2>
 
         <div className="simple-rsvp__decoration" aria-hidden="true">
           <span />
@@ -48,9 +48,8 @@ export const RSVP = ({
         </div>
 
         <p className="simple-rsvp__description">
-          Your presence would make our celebration even more meaningful. Please
-          confirm your attendance directly through WhatsApp or Viber by{" "}
-          <strong className="simple-rsvp__deadline">1 August 2026</strong>.
+          Prania juaj do ta bënte festën tonë edhe më të veçantë. Ju lutemi, konfirmoni pjesëmarrjen tuaj përmes WhatsApp ose Viber deri më{" "}
+          <strong className="simple-rsvp__deadline">13 Gusht 2026</strong>.
         </p>
 
         <div className="simple-rsvp__buttons">
@@ -61,7 +60,7 @@ export const RSVP = ({
             className="simple-rsvp__button simple-rsvp__button--whatsapp"
             aria-label="Confirm attendance using WhatsApp"
           >
-            <span>Confirm using WhatsApp</span>
+            <span>Konfirmo përmes WhatsApp</span>
           </a>
 
           <a
@@ -69,12 +68,12 @@ export const RSVP = ({
             className="simple-rsvp__button simple-rsvp__button--viber"
             aria-label="Confirm attendance using Viber"
           >
-            <span>Confirm using Viber</span>
+            <span>Konfirmo përmes Viber</span>
           </a>
         </div>
 
         <p className="simple-rsvp__signature">
-          With love,
+          Me dashuri, <br />
           <strong>
             {firstName} &amp; {secondName}
           </strong>

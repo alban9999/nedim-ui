@@ -51,10 +51,10 @@ export const Venue = ({
       <div className="wedding-venue__layout">
         <div className="wedding-venue__content reveal reveal-left">
           <p className="wedding-venue__eyebrow">
-            The celebration location
+            Lokacioni i dasmës
           </p>
 
-          <h2>Wedding Venue</h2>
+          <h2>{venueName}</h2>
 
           <div className="wedding-venue__divider">
             <span />
@@ -62,16 +62,8 @@ export const Venue = ({
             <span />
           </div>
 
-          <h3>{venueName}</h3>
-
-          <p className="wedding-venue__address">
-            {venueAddress}
-          </p>
-
           <p className="wedding-venue__description">
-            Join us in an elegant setting filled with warmth,
-            candlelight, music, and the people who mean the most
-            to us.
+            Dashuria jonë bëhet edhe më e bukur kur ndahet me njerëzit që duam. Ju ftojmë të jeni pranë nesh ndërsa fillojmë kapitullin më të bukur të jetës sonë.
           </p>
 
           <div className="wedding-venue__date">
@@ -89,7 +81,7 @@ export const Venue = ({
             rel="noreferrer"
             className="wedding-venue__map-button"
           >
-            <span>Open in Maps</span>
+            <span>Hapeni Lokacionin</span>
           </a>
         </div>
       </div>

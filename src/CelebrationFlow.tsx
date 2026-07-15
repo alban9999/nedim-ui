@@ -75,28 +75,27 @@ export const CelebrationFlow = ({
       >
         <div className="celebration-invitation__content reveal">
           <p className="celebration-invitation__eyebrow">
-            The Wedding Celebration
+            Celebrimi i dasmës
           </p>
 
           <h2 className="celebration-invitation__title">
-            Save <span>the</span> Date
+            Ruajeni <span>këtë</span> datë
           </h2>
 
           <p className="celebration-invitation__message">
-            With joyful hearts, we invite you to share in our
-            happiness as we unite in marriage and celebrate the
-            beginning of our life together.
+            Kjo datë e veçantë shënon fillimin e rrugëtimit tonë së bashku.
+Një kapitull i ri, i mbushur me dashuri, lumturi dhe kujtime të paharrueshme.
           </p>
 
           <div className="celebration-invitation__details">
             <div className="celebration-invitation__detail">
               <span className="celebration-invitation__label">
-                When
+                Data
               </span>
 
               <strong>{dateText}</strong>
 
-              <p>Beginning at {ceremonyTime}</p>
+              <p>Duke filluar nga ora {ceremonyTime}</p>
             </div>
 
             <div
@@ -110,7 +109,7 @@ export const CelebrationFlow = ({
 
             <div className="celebration-invitation__detail">
               <span className="celebration-invitation__label">
-                Where
+                Lokacjoni
               </span>
 
               <strong>{venueName}</strong>
@@ -120,7 +119,7 @@ export const CelebrationFlow = ({
           </div>
 
           <p className="celebration-invitation__signature">
-            We cannot wait to celebrate with you
+            Mezi presim të festojmë së bashku me ju.
           </p>
 
           <div
