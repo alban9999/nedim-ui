@@ -19,7 +19,7 @@ const WEDDING = {
   secondName: "Arlinda",
   initials: "N & A",
 
-  date: new Date(2026, 7, 24, 18, 0, 0),
+  date: new Date("2026-08-13T19:00:00"),
   dayName: "E Enjte",
   dateText: "13 Gusht 2026",
   ceremonyTime: "19:00",
